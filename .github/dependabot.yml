@@ -112,13 +112,16 @@ updates:
   groups:
     kubernetes:
       patterns: ["k8s.io/*"]
+  groups:
+    golang-x-tools:
+      patterns: ["golang.org/x/*"]
+      update-types:
+      - "minor"
+      - "patch"
   ignore:
   # Ignore major and minor bumps for release branch
   - dependency-name: "*"
     update-types: ["version-update:semver-major", "version-update:semver-minor"]
-  # golang.org/x/* only releases minors no patches, so minors have to be allowed
-  - dependency-name: "golang.org/x/*"
-    update-types: ["version-update:semver-major"]
   # ignore ipam, as it needs more than just gomod
   - dependency-name: "github.com/metal3-io/ip-address-manager/api"
   commit-message:
@@ -132,13 +135,16 @@ updates:
   groups:
     kubernetes:
       patterns: ["k8s.io/*"]
+  groups:
+    golang-x-tools:
+      patterns: ["golang.org/x/*"]
+      update-types:
+      - "minor"
+      - "patch"
   ignore:
   # Ignore major and minor bumps for release branch
   - dependency-name: "*"
     update-types: ["version-update:semver-major", "version-update:semver-minor"]
-  # golang.org/x/* only releases minors no patches, so minors have to be allowed
-  - dependency-name: "golang.org/x/*"
-    update-types: ["version-update:semver-major"]
   # ignore ipam, as it needs more than just gomod
   - dependency-name: "github.com/metal3-io/ip-address-manager/api"
   commit-message:
@@ -152,14 +158,17 @@ updates:
   groups:
     kubernetes:
       patterns: ["k8s.io/*"]
+  groups:
+    golang-x-tools:
+      patterns: ["golang.org/x/*"]
+      update-types:
+      - "minor"
+      - "patch"
   ignore:
   # Ignore major and minor bumps for release branch
   - dependency-name: "*"
     update-types: ["version-update:semver-major", "version-update:semver-minor"]
-  # golang.org/x/* only releases minors no patches, so minors have to be allowed
-  - dependency-name: "golang.org/x/*"
-    update-types: ["version-update:semver-major"]
-  # ignore ipam, as it needs more than just gomod
+    # ignore ipam, as it needs more than just gomod
   - dependency-name: "github.com/metal3-io/ip-address-manager/api"
   commit-message:
     prefix: ":seedling:"
@@ -171,13 +180,17 @@ updates:
   groups:
     kubernetes:
       patterns: ["k8s.io/*"]
+  groups:
+    golang-x-tools:
+      patterns: ["golang.org/x/*"]
+      update-types:
+      - "minor"
+      - "patch"
   ignore:
   # Ignore major and minor bumps for release branch
   - dependency-name: "*"
     update-types: ["version-update:semver-major", "version-update:semver-minor"]
   # golang.org/x/* only releases minors no patches, so minors have to be allowed
-  - dependency-name: "golang.org/x/*"
-    update-types: ["version-update:semver-major"]
   commit-message:
     prefix: ":seedling:"
 ## release-1.7 branch config ends here
